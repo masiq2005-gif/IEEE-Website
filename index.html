@@ -1,0 +1,2134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        IEEE Student Branch | PET Engineering College
+    </title>
+
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", Arial, sans-serif;
+            color: #12127b;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* =========================
+           TOP BAR
+        ========================= */
+
+        .topbar {
+            background: #0f068e;
+            color: white;
+            height: 40px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 7%;
+
+            font-size: 13px;
+        }
+
+        .top-left {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .top-left span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .top-right {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .top-right a:hover {
+            opacity: 0.75;
+        }
+
+
+        /* =========================
+           COLLEGE HEADER
+        ========================= */
+
+        .college-header {
+            background: white;
+            min-height: 115px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 12px 7%;
+        }
+
+        .college-brand {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .pet-logo {
+            width: 105px;
+            height: 90px;
+            object-fit: contain;
+        }
+
+        .college-name h1 {
+            color: #153d75;
+            font-size: 35px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .college-name h3 {
+            color: #173f78;
+            font-size: 14px;
+            margin-top: 5px;
+            font-weight: 700;
+        }
+
+        .organizes {
+            color: #444;
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        .badges {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .badges img {
+            width: 62px;
+            height: 62px;
+            object-fit: contain;
+        }
+
+        .ieee-header-logo {
+            height: 68px !important;
+            width: 185px !important;
+            object-fit: contain !important;
+            margin-left: 0px;
+            padding-left: 10px;
+            border-left: 2px solid #1c5da4;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        .navbar {
+            background: #07539f;
+            height: 48px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 48px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 14px 4px;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 5px;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            height: 315px;
+            position: relative;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(3,52,105,0.25),
+                    rgba(0,48,105,0.90)
+                ),
+                url("images/college.jpg");
+
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background:
+                radial-gradient(
+                    circle at 85% 50%,
+                    rgba(0,130,255,0.30),
+                    transparent 35%
+                );
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-shadow: 0 3px 10px rgba(0,0,0,0.35);
+        }
+
+        .hero-content h2 {
+            font-size: 30px;
+            font-weight: 700;
+            color: #d8edff;
+            margin-top: 2px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            font-style: italic;
+            margin-top: 8px;
+            color: white;
+        }
+
+        .hero-btn {
+            margin-top: 20px;
+
+            padding: 10px 27px;
+
+            border: 2px solid white;
+            border-radius: 25px;
+
+            background: #0877dc;
+            color: white;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            transition: 0.3s;
+        }
+
+        .hero-btn:hover {
+            background: white;
+            color: #07539f;
+        }
+
+
+        /* =========================
+           COMMON SECTION
+        ========================= */
+
+        section {
+            scroll-margin-top: 55px;
+        }
+
+        .section-title {
+            font-size: 27px;
+            color: #123f7b;
+            font-weight: 800;
+
+            border-left: 6px solid #0861b7;
+
+            padding-left: 12px;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-section {
+            padding: 28px 7% 24px;
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 1fr 1.2fr;
+            gap: 30px;
+            align-items: stretch;
+        }
+
+        .about-box {
+            padding-right: 22px;
+            border-right: 1px solid #c7d8ea;
+        }
+
+        .about-heading {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 12px;
+        }
+
+        .about-icon {
+            width: 52px;
+            height: 52px;
+
+            border-radius: 50%;
+
+            background: #0966be;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 22px;
+        }
+
+        .about-heading h3 {
+            font-size: 18px;
+            color: #103f7c;
+        }
+
+        .about-box p {
+            color: #345b8d;
+            font-size: 14px;
+            margin-bottom: 13px;
+        }
+
+
+        /* =========================
+           OBJECTIVES
+        ========================= */
+
+        .objectives h3 {
+            font-size: 17px;
+            margin-bottom: 17px;
+            color: #123f7b;
+        }
+
+        .objectives h3 i {
+            font-size: 23px;
+            color: #075eae;
+        }
+
+        .objectives ul {
+            list-style: none;
+        }
+
+        .objectives li {
+            display: flex;
+            gap: 10px;
+
+            margin-bottom: 13px;
+
+            color: #315b8d;
+            font-size: 14px;
+        }
+
+        .objectives li i {
+            color: #0769c5;
+            margin-top: 5px;
+        }
+
+
+        /* =========================
+           MISSION VISION
+        ========================= */
+
+        .mission-box {
+            background: #eef7ff;
+            border-radius: 10px;
+
+            padding: 20px 24px;
+
+            box-shadow: 0 3px 12px rgba(0,70,140,0.07);
+        }
+
+        .mission-box h2 {
+            color: #123f7b;
+            font-size: 20px;
+            margin-bottom: 18px;
+        }
+
+        .mission-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 18px;
+        }
+
+        .mission-item > i {
+            color: #0765bd;
+            font-size: 24px;
+            margin-top: 3px;
+        }
+
+        .mission-item h3 {
+            color: #12437f;
+            font-size: 15px;
+            margin-bottom: 4px;
+        }
+
+        .mission-item p {
+            color: #345b8d;
+            font-size: 13px;
+            font-style: italic;
+        }
+
+
+        /* =========================
+           STATS
+        ========================= */
+
+        .stats {
+            background: linear-gradient(
+                90deg,
+                #07539f,
+                #0a62b5
+            );
+
+            color: white;
+
+            padding: 16px 7%;
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .stat {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+
+            border-right: 1px solid rgba(255,255,255,0.45);
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat > i {
+            font-size: 34px;
+        }
+
+        .number {
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+        .label {
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           ACTIVITIES
+        ========================= */
+
+        .activities-section {
+            background: #f5faff;
+            padding: 28px 7% 35px;
+        }
+
+        .activities-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            margin-bottom: 18px;
+        }
+
+        .activities-heading h2 {
+            color: #123f7b;
+            font-size: 22px;
+        }
+
+        .activities-heading h2 i {
+            color: #0862b5;
+            margin-right: 8px;
+        }
+
+        .activities-note {
+            color: #1760a7;
+            font-size: 13px;
+        }
+
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .activity-card {
+            background: white;
+
+            border: 1px solid #dbe9f6;
+            border-radius: 9px;
+
+            padding: 20px;
+
+            box-shadow: 0 3px 12px rgba(0,70,140,0.07);
+
+            transition: 0.3s;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,70,140,0.13);
+        }
+
+        .activity-icon {
+            width: 52px;
+            height: 52px;
+
+            border-radius: 10px;
+
+            background: #075aa9;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 22px;
+
+            margin-bottom: 14px;
+        }
+
+        .activity-card h3 {
+            color: #123f7b;
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .activity-card p {
+            color: #506d91;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           PLANNED ACTIVITIES
+        ========================= */
+
+        .future-section {
+            padding: 35px 7%;
+            background: white;
+        }
+
+        .future-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+        }
+
+        .future-card {
+            background: #f3f8fd;
+            border-left: 5px solid #0862b5;
+            border-radius: 8px;
+            padding: 22px;
+        }
+
+        .future-card h3 {
+            color: #123f7b;
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+
+        .future-card ul {
+            list-style: none;
+        }
+
+        .future-card li {
+            color: #3e6087;
+            font-size: 14px;
+            margin-bottom: 9px;
+        }
+
+        .future-card li i {
+            color: #0864b9;
+            margin-right: 8px;
+        }
+
+
+        /* =========================
+           COMMITTEE
+        ========================= */
+
+        .committee-section {
+            background: #f5faff;
+            padding: 35px 7%;
+        }
+
+        .committee-intro {
+            max-width: 800px;
+            color: #496a90;
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+
+        .committee-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .committee-row {
+            display: grid;
+            gap: 20px;
+        }
+
+        .committee-row.two-cards {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .committee-row.three-cards {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .committee-card {
+            background: white;
+            padding: 24px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #dbe9f6;
+        }
+
+        .person-icon {
+            width: 70px;
+            height: 70px;
+            margin: auto;
+
+            border-radius: 50%;
+
+            background: #e4f1ff;
+            color: #075da9;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 30px;
+        }
+
+        .person-icon img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .committee-card h3 {
+            color: #123f7b;
+            font-size: 16px;
+            margin-top: 13px;
+        }
+
+        .committee-card p {
+            color: #66819f;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           GALLERY
+        ========================= */
+
+        .gallery-section {
+            padding: 35px 7%;
+            background: white;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .gallery-item {
+            height: 190px;
+            overflow: hidden;
+            border-radius: 9px;
+            background: #eef5fb;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.06);
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-section {
+            background: #f5faff;
+            padding: 35px 7%;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .contact-box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #dceaf7;
+        }
+
+        .contact-box h3 {
+            color: #123f7b;
+            font-size: 20px;
+            margin-bottom: 18px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 13px;
+            margin-bottom: 17px;
+            color: #456889;
+            font-size: 14px;
+        }
+
+        .contact-item i {
+            color: #0863b6;
+            font-size: 18px;
+            width: 20px;
+            margin-top: 3px;
+        }
+
+        .contact-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 260px;
+        }
+
+        .contact-logo img {
+            width: 270px;
+            max-height: 170px;
+            object-fit: contain;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #073d79;
+            color: white;
+            padding: 25px 7% 15px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr;
+            gap: 35px;
+        }
+
+        .footer-brand h2 {
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+
+        .footer-brand p {
+            color: #c9ddf2;
+            font-size: 13px;
+            max-width: 420px;
+        }
+
+        .footer-column h3 {
+            font-size: 15px;
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            display: block;
+            color: #c9ddf2;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.2);
+            margin-top: 20px;
+            padding-top: 12px;
+            text-align: center;
+            color: #c9ddf2;
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1100px) {
+
+            .college-name h1 {
+                font-size: 24px;
+            }
+
+            .nav-links {
+                gap: 25px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-box {
+                border-right: none;
+                border-bottom: 1px solid #d3e1ef;
+                padding-bottom: 20px;
+            }
+
+        }
+
+
+        @media (max-width: 850px) {
+
+            .topbar {
+                height: auto;
+                padding: 8px 5%;
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+
+            .college-header {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
+
+            .college-brand {
+                flex-direction: column;
+            }
+
+            .badges {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .ieee-header-logo {
+                border-left: none;
+                padding-left: 0;
+                margin-left: 0;
+            }
+
+            .navbar {
+                height: auto;
+                padding: 8px;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+
+            .hero-content h1 {
+                font-size: 34px;
+            }
+
+            .hero-content h2 {
+                font-size: 22px;
+            }
+
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stat {
+                border-right: none;
+            }
+
+            .activities-grid,
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .committee-row.three-cards {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .future-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .pet-logo {
+                width: 85px;
+                height: 75px;
+            }
+
+            .college-name h1 {
+                font-size: 20px;
+            }
+
+            .college-name h3 {
+                font-size: 11px;
+            }
+
+            .hero {
+                height: 340px;
+            }
+
+            .hero-content h1 {
+                font-size: 28px;
+            }
+
+            .hero-content h2 {
+                font-size: 19px;
+            }
+
+            .hero-content p {
+                font-size: 14px;
+            }
+
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+
+            .committee-row.two-cards,
+            .committee-row.three-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .stat {
+                justify-content: flex-start;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         TOP BAR
+    ========================= -->
+
+    <div class="topbar">
+
+        <div class="top-left">
+
+            <span>
+                <i class="fa-solid fa-envelope"></i>
+                ieeesb@petengg.ac.in
+            </span>
+
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                PET Engineering College, Vallioor, Tirunelveli
+            </span>
+
+        </div>
+
+
+        <div class="top-right">
+
+            <span>|</span>
+
+            <a href="#home">
+                Home
+            </a>
+
+            <span>|</span>
+
+            <a href="#about">
+                About IEEE
+            </a>
+
+            <span>|</span>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================
+         COLLEGE HEADER
+    ========================= -->
+
+    <header class="college-header">
+
+        <div class="college-brand">
+
+            <img src="images/pet-logo.jpg"
+                 class="pet-logo"
+                 alt="PET Engineering College Logo">
+
+
+            <div class="college-name">
+
+                <h1>
+                    PET ENGINEERING COLLEGE
+                <h1>
+
+            </div>
+
+        </div>
+
+
+        <div class="badges">
+
+            <img src="images/nba.jpg"
+                 alt="NBA Accredited">
+
+            <img src="images/years29.jpg"
+                 alt="29 Years">
+
+            <img src="images/naac.jpg"
+                 alt="NAAC Accredited">
+
+            <img src="images/tuv.jpg"
+                 alt="TUV">
+
+            <img src="images/ieee.jpg"
+                 class="ieee-header-logo"
+                 alt="IEEE">
+
+            <img src="images/ieee%20student.jpg"
+                 class="ieee-header-logo"
+                 alt="IEEE">
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+
+    <nav class="navbar">
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#home">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#about">
+                    About Us
+                </a>
+            </li>
+
+            <li>
+                <a href="#committee">
+                    Committee
+                </a>
+            </li>
+
+            <li>
+                <a href="#activities">
+                    Activities
+                </a>
+            </li>
+
+            <li>
+                <a href="#members">
+                    Members
+                </a>
+            </li>
+
+            <li>
+                <a href="#gallery">
+                    Gallery
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+                IEEE STUDENT BRANCH (STB18761)
+            </h1>
+
+            <h2>
+                PET ENGINEERING COLLEGE
+            </h2>
+
+            <p>
+                Connecting Students with Technology, Innovation and Excellence
+            </p>
+
+            <a href="#about"
+               class="hero-btn">
+
+                Explore IEEE
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ABOUT
+    ========================= -->
+
+    <section class="about-section" id="about">
+
+        <h2 class="section-title">
+            About IEEE Student Branch
+        </h2>
+
+
+        <div class="about-grid">
+
+
+            <!-- ABOUT US -->
+
+            <div class="about-box">
+
+                <div class="about-heading">
+
+                    <div class="about-icon">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+
+                    <h3>
+                        About Us
+                    </h3>
+
+                </div>
+
+
+                <p>
+                    The IEEE Student Branch at PET Engineering College
+                    is a newly established student initiative focused on
+                    creating a platform for students to explore technology,
+                    innovation and professional development.
+                </p>
+
+
+                <p>
+                    The branch aims to bring students together through
+                    technical workshops, guest lectures, hands-on sessions,
+                    project showcases and other learning activities.
+                </p>
+
+
+                <p>
+                    Our goal is to encourage students to learn emerging
+                    technologies, develop practical skills, share ideas
+                    and actively participate in the IEEE community.
+                </p>
+
+            </div>
+
+
+
+            <!-- OBJECTIVES -->
+
+            <div class="objectives">
+
+                <h3>
+                    <i class="fa-solid fa-bullseye"></i>
+                    &nbsp; Our Objectives
+                </h3>
+
+
+                <ul>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Conduct technical workshops and hands-on sessions
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Organize guest lectures and technical talks
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Encourage project development and innovation
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Develop technical and professional skills
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Promote teamwork, creativity and knowledge sharing
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- MISSION VISION -->
+
+            <div class="mission-box">
+
+                <h2>
+                    Mission & Vision
+                </h2>
+
+
+                <div class="mission-item">
+
+                    <i class="fa-solid fa-rocket"></i>
+
+                    <div>
+
+                        <h3>
+                            Our Mission
+                        </h3>
+
+                        <p>
+                            To provide students with opportunities to learn
+                            emerging technologies, develop practical and
+                            professional skills, and participate in technical
+                            activities that encourage innovation and
+                            collaboration.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="mission-item">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    <div>
+
+                        <h3>
+                            Our Vision
+                        </h3>
+
+                        <p>
+                            To build an active and innovative student
+                            community where students learn, create,
+                            collaborate and contribute to technological
+                            development.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         STATS
+    ========================= -->
+
+    <section class="stats">
+
+        <div class="stats-container">
+
+
+            <div class="stat">
+
+                <i class="fa-solid fa-flag"></i>
+
+                <div>
+
+                    <div class="number">
+                        NEW
+                    </div>
+
+                    <div class="label">
+                        Student Branch
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat">
+
+                <i class="fa-solid fa-users"></i>
+
+                <div>
+
+                    <div class="number">
+                        IEEE
+                    </div>
+
+                    <div class="label">
+                        Student Community
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat">
+
+                <i class="fa-solid fa-microchip"></i>
+
+                <div>
+
+                    <div class="number">
+                        TECH
+                    </div>
+
+                    <div class="label">
+                        Technical Activities
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="stat">
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+                <div>
+
+                    <div class="number">
+                        IDEAS
+                    </div>
+
+                    <div class="label">
+                        Innovation & Learning
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ACTIVITIES
+    ========================= -->
+
+    <section class="activities-section"
+             id="activities">
+
+
+        <div class="activities-heading">
+
+            <h2>
+
+                <i class="fa-solid fa-calendar-days"></i>
+
+                Upcoming Technical Activities
+
+            </h2>
+
+
+            <div class="activities-note">
+                Activities planned for students
+            </div>
+
+        </div>
+
+
+
+        <div class="activities-grid">
+
+
+            <!-- WORKSHOP -->
+
+            <div class="activity-card">
+
+                <div class="activity-icon">
+
+                    <i class="fa-solid fa-microchip"></i>
+
+                </div>
+
+
+                <h3>
+                    Technical Workshops
+                </h3>
+
+
+                <p>
+                    Hands-on workshops will be organized to help students
+                    explore emerging technologies and develop practical
+                    technical skills.
+                </p>
+
+            </div>
+
+
+
+            <!-- GUEST LECTURE -->
+
+            <div class="activity-card">
+
+                <div class="activity-icon">
+
+                    <i class="fa-solid fa-user-tie"></i>
+
+                </div>
+
+
+                <h3>
+                    Guest Lectures
+                </h3>
+
+
+                <p>
+                    Industry professionals and academic experts will be
+                    invited to share knowledge, experiences and insights
+                    about current technologies.
+                </p>
+
+            </div>
+
+
+
+            <!-- PROJECT -->
+
+            <div class="activity-card">
+
+                <div class="activity-icon">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                </div>
+
+
+                <h3>
+                    Project & Innovation Activities
+                </h3>
+
+
+                <p>
+                    Students will get opportunities to present projects,
+                    exchange ideas and develop innovative technology-based
+                    solutions.
+                </p>
+
+            </div>
+
+
+
+            <!-- CODING -->
+
+            <div class="activity-card">
+
+                <div class="activity-icon">
+
+                    <i class="fa-solid fa-code"></i>
+
+                </div>
+
+
+                <h3>
+                    Coding & Technical Challenges
+                </h3>
+
+
+                <p>
+                    Technical challenges and coding activities will
+                    encourage students to improve problem-solving and
+                    programming skills.
+                </p>
+
+            </div>
+
+
+
+            <div class="activity-card">
+
+                <div class="activity-icon">
+
+                    <i class="fa-solid fa-trophy"></i>
+
+                </div>
+
+
+                <h3>
+                    Technical Competitions
+                </h3>
+
+
+                <p>
+                    Competitions and idea-based activities will encourage
+                    creativity, teamwork and technical excellence.
+                </p>
+
+            </div>
+
+
+
+            <!-- AWARENESS -->
+
+            <div class="activity-card">
+
+                <div class="activity-icon">
+
+                    <i class="fa-solid fa-globe"></i>
+
+                </div>
+
+
+                <h3>
+                    IEEE Awareness Activities
+                </h3>
+
+
+                <p>
+                    Students will be introduced to IEEE opportunities,
+                    professional development and the global engineering
+                    community.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FUTURE PLANS
+    ========================= -->
+
+    <section class="future-section">
+
+        <h2 class="section-title">
+            Our Future Plans
+        </h2>
+
+
+        <div class="future-grid">
+
+
+            <div class="future-card">
+
+                <h3>
+                    <i class="fa-solid fa-calendar-check"></i>
+                    Technical Activities
+                </h3>
+
+
+                <ul>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Technical workshops
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Hands-on training sessions
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Guest lectures
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Project showcases
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div class="future-card">
+
+                <h3>
+                    <i class="fa-solid fa-users"></i>
+                    Student Development
+                </h3>
+
+
+                <ul>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Technical skill development
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Teamwork and collaboration
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Innovation and creativity
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+                        Professional development
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         COMMITTEE
+    ========================= -->
+
+    <section class="committee-section"
+             id="committee">
+
+        <h2 class="section-title">
+            IEEE Student Branch Committee
+        </h2>
+
+
+        <p class="committee-intro">
+
+            The IEEE Student Branch will be supported by a student
+            committee responsible for coordinating technical activities,
+            student engagement and branch initiatives.
+
+        </p>
+
+
+        <div class="committee-grid">
+
+            <div class="committee-row two-cards">
+
+                <div class="committee-card">
+                    <div class="person-icon">
+                        <img src="images/Ganesh.jpg" alt="Student Branch Counselor">
+                    </div>
+                    <h3>Student Branch Counselor</h3>
+                    <p>Dr.R.S.Ganesh</p>
+                </div>
+
+                <div class="committee-card">
+                    <div class="person-icon">
+                        <img src="images/Sneha.jpg" alt="Faculty Coordinator">
+                    </div>
+                    <h3>Faculty Coordinator</h3>
+                    <p>Ms.K.Sneha</p>
+                </div>
+
+            </div>
+
+            <div class="committee-row two-cards">
+
+                <div class="committee-card">
+                    <div class="person-icon">
+                        <img src="images/paramesh.jpg" alt="Student Branch Chair">
+                    </div>
+                    <h3>Student Branch Chair</h3>
+                    <p>Ms.V.Parameswari</p>
+                </div>
+
+                <div class="committee-card">
+                    <div class="person-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <h3>Student Branch Vice Chair</h3>
+                    <p>Mr.Gnana Rohit Maria Xavier</p>
+                </div>
+
+            </div>
+
+            <div class="committee-row three-cards">
+
+                <div class="committee-card">
+                    <div class="person-icon">
+                        <img src="images/vajitha.jpg" alt="Student Branch Secretary">
+                    </div>
+                    <h3>Student Branch Secretary</h3>
+                    <p>Ms.S.Vajitha Bervin</p>
+                </div>
+
+                <div class="committee-card">
+                    <div class="person-icon">
+                        <img src="images/asiq.jpg" alt="Student Branch Treasurer">
+                    </div>
+                    <h3>Student Branch Treasurer</h3>
+                    <p>Mr.M.Asiq</p>
+                </div>
+
+                <div class="committee-card">
+                    <div class="person-icon">
+                        <img src="images/melwin.jpg" alt="Student Branch Webmaster">
+                    </div>
+                    <h3>Student Branch Webmaster</h3>
+                    <p>Mr.M.Melwin</p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         MEMBERS
+    ========================= -->
+
+    <section class="future-section"
+             id="members">
+
+        <h2 class="section-title">
+            IEEE Student Members
+        </h2>
+
+
+        <div class="future-grid">
+
+
+            <div class="future-card">
+
+                <h3>
+                    <i class="fa-solid fa-user-graduate"></i>
+                    Student Community
+                </h3>
+
+                <p style="color:#456889;font-size:14px;">
+
+                    Students interested in technology, engineering,
+                    innovation and professional development can participate
+                    in the IEEE Student Branch activities.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="future-card">
+
+                <h3>
+                    <i class="fa-solid fa-network-wired"></i>
+                    Learn & Connect
+                </h3>
+
+                <p style="color:#456889;font-size:14px;">
+
+                    The branch will provide opportunities for students to
+                    connect, learn from experts, collaborate on projects
+                    and explore emerging technologies.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         GALLERY
+    ========================= -->
+
+    <section class="gallery-section"
+             id="gallery">
+
+        <h2 class="section-title">
+            Gallery
+        </h2>
+
+
+        <div class="gallery-grid">
+
+
+            <div class="gallery-item">
+
+                <img src="images/college.jpg"
+                     alt="PET Engineering College">
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img src="images/ieee.jpg"
+                     alt="IEEE">
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <img src="images/pet-logo.jpg"
+                     alt="PET Engineering College Logo">
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT
+    ========================= -->
+
+    <section class="contact-section"
+             id="contact">
+
+        <h2 class="section-title">
+            Contact Us
+        </h2>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-box">
+
+                <h3>
+                    Get in Touch
+                </h3>
+
+
+                <div class="contact-item">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <span>
+                        PET Engineering College,<br>
+                        6,Tiruchendur Road, Vallioor,<br>
+                        Vallioor - 627117, Tirunelveli,<br>
+                        Tamil Nadu, India
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <span>
+                        ieeesb@petengg.ac.in
+                    </span>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <i class="fa-solid fa-microchip"></i>
+
+                    <span>
+                        IEEE Student Branch<br>
+                        PET Engineering College
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="contact-box contact-logo">
+
+                <img src="images/ieee.jpg"
+                     alt="IEEE Logo">
+
+                <img src="images/ieee%20student.jpg"
+                 class="ieee-header-logo"
+                 alt="IEEE">     
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+
+            <div class="footer-brand">
+
+                <h2>
+                    IEEE Student Branch
+                </h2>
+
+                <p>
+                    PET Engineering College
+                </p>
+
+                <p style="margin-top:7px;">
+
+                    Connecting students with technology,
+                    innovation and excellence.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#about">
+                    About Us
+                </a>
+
+                <a href="#activities">
+                    Activities
+                </a>
+
+                <a href="#committee">
+                    Committee
+                </a>
+
+            </div>
+
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Explore
+                </h3>
+
+                <a href="#members">
+                    Members
+                </a>
+
+                <a href="#gallery">
+                    Gallery
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 IEEE Student Branch - PET Engineering College.
+            All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
